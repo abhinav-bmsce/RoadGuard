@@ -1,0 +1,13 @@
+# RoadGuard RDD2022 Dataset Configuration for YOLOv8
+path: ../dataset/processed # dataset root dir
+train: images/train
+val: images/val
+test: images/test
+
+# Classes
+names:
+  0: D00_Longitudinal_Crack
+  1: D10_Transverse_Crack
+  2: D20_Alligator_Crack
+  3: D40_Pothole
+

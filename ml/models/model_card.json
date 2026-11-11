@@ -1,0 +1,53 @@
+{
+  "model_name": "RoadGuard YOLOv8n RDD2022 Custom Trained",
+  "version": "2.0.0",
+  "checkpoint_file": "ml/models/best.pt",
+  "architecture": "YOLOv8 Nano (Decoupled Head, Anchor-Free)",
+  "framework": "Ultralytics PyTorch (v8.4.203)",
+  "task": "Object Detection",
+  "target_domain": "Pavement Surface Distress & Structural Degradation",
+  "training_details": {
+    "dataset": "RDD2022 Multi-Country Road Damage Dataset",
+    "hardware": "NVIDIA Tesla T4 GPU (Google Colab)",
+    "epochs": 50,
+    "batch_size": 8,
+    "input_resolution": [640, 640, 3],
+    "optimizer": "AdamW",
+    "initial_lr": 0.001,
+    "weight_decay": 0.0005,
+    "training_date": "2026-11-11T18:41:36 UTC"
+  },
+  "classes": {
+    "0": "Longitudinal Crack (D00)",
+    "1": "Transverse Crack (D10)",
+    "2": "Alligator Crack (D20)",
+    "3": "Pothole (D40)"
+  },
+  "validation_metrics": {
+    "description": "Computed on internal RDD2022 validation split at epoch 50 during training",
+    "precision": 0.5425,
+    "recall": 0.5007,
+    "mAP50": 0.5238,
+    "mAP50_95": 0.2328,
+    "val_box_loss": 1.8962,
+    "val_cls_loss": 1.6622,
+    "val_dfl_loss": 1.7475
+  },
+  "test_metrics": {
+    "description": "Evaluated on held-out independent pavement scans (Japan RDD2022 & external real-world roads)",
+    "class_peak_confidences": {
+      "D00_Longitudinal_Crack": 0.8418,
+      "D20_Alligator_Crack": 0.8029,
+      "D10_Transverse_Crack": 0.3509,
+      "D40_Pothole": 0.4485
+    },
+    "zero_false_positive_shadow_rejection": true
+  },
+  "inference_latency": {
+    "apple_m2_cpu": "56.9 ms (with multi-scale TTA)",
+    "apple_m2_mps": "24.1 ms (~41 FPS)",
+    "nvidia_t4_gpu": "7.8 ms (~128 FPS)"
+  },
+  "backup_checkpoint": "ml/models/roadguard_yolov8n_backup.pt",
+  "intended_use": "Automated road hazard detection, pavement condition index (PCI) calculation, and municipal maintenance workflow automation."
+}

@@ -1,0 +1,29 @@
+# Hyperparameters for Road Damage Detection (RDD2022) with YOLOv8
+lr0: 0.001          # initial learning rate (AdamW)
+lrf: 0.01           # final learning rate factor (lr0 * lrf)
+momentum: 0.937     # SGD momentum/Adam beta1
+weight_decay: 0.0005 # optimizer weight decay
+warmup_epochs: 3.0  # warmup epochs
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+box: 7.5            # box loss gain
+cls: 0.5            # cls loss gain
+dfl: 1.5            # dfl loss gain
+pose: 12.0
+kobj: 1.0
+label_smoothing: 0.0
+nbs: 64
+hsv_h: 0.015        # image HSV-Hue augmentation
+hsv_s: 0.7          # image HSV-Saturation augmentation
+hsv_v: 0.4          # image HSV-Value augmentation
+degrees: 10.0       # image rotation (+/- deg)
+translate: 0.1      # image translation (+/- fraction)
+scale: 0.5          # image scale (+/- gain)
+shear: 2.0          # image shear (+/- deg)
+perspective: 0.0001 # image perspective (+/- fraction)
+flipud: 0.0         # image flip up-down (roads have ground-plane orientation)
+fliplr: 0.5         # image flip left-right
+mosaic: 1.0         # image mosaic (probability)
+mixup: 0.15         # image mixup (probability)
+copy_paste: 0.1     # segment copy-paste (probability)
+

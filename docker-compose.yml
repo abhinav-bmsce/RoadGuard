@@ -1,0 +1,57 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: roadguard-db
+    restart: always
+    environment:
+      POSTGRES_USER: roadguard_user
+      POSTGRES_PASSWORD: roadguard_password
+      POSTGRES_DB: roadguard_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U roadguard_user -d roadguard_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Backend & Deep Learning Inference Engine
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: roadguard-backend
+    restart: always
+    environment:
+      - DATABASE_URL=postgresql://roadguard_user:roadguard_password@db:5432/roadguard_db
+      - ENVIRONMENT=production
+      - MODEL_PATH=/app/ml/models/roadguard_yolov8n.pt
+      - MODEL_DEVICE=cpu
+      - UPLOAD_DIR=/app/backend/uploads
+    volumes:
+      - ./backend/uploads:/app/backend/uploads
+      - ./ml/models:/app/ml/models
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # React Frontend with Nginx Reverse Proxy
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    container_name: roadguard-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+

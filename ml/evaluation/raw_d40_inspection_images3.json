@@ -1,0 +1,342 @@
+{
+  "imgsz_640_total": 300,
+  "imgsz_640_d40_count": 73,
+  "imgsz_640_top_d40": [
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.1818,
+      "bbox": [
+        275.55,
+        103.51,
+        311.11,
+        114.25
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.08786,
+      "bbox": [
+        184.29,
+        142.13,
+        223.84,
+        157.53
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.05228,
+      "bbox": [
+        257.71,
+        128.97,
+        309.67,
+        143.38
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.02386,
+      "bbox": [
+        274.73,
+        100.15,
+        317.07,
+        115.16
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.01344,
+      "bbox": [
+        243.08,
+        126.78,
+        310.61,
+        146.09
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00532,
+      "bbox": [
+        182.94,
+        139.67,
+        233.93,
+        160.12
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00484,
+      "bbox": [
+        235.81,
+        125.39,
+        312.02,
+        150.66
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00455,
+      "bbox": [
+        234.02,
+        117.7,
+        283.8,
+        132.59
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00438,
+      "bbox": [
+        270.46,
+        131.1,
+        310.22,
+        142.77
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00428,
+      "bbox": [
+        243.07,
+        141.38,
+        275.91,
+        153.27
+      ]
+    }
+  ],
+  "imgsz_640_post_nms_d40": [
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.1818,
+      "bbox": [
+        275.55,
+        103.51,
+        311.11,
+        114.25
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.08786,
+      "bbox": [
+        184.29,
+        142.13,
+        223.84,
+        157.53
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.05228,
+      "bbox": [
+        257.71,
+        128.97,
+        309.67,
+        143.38
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00484,
+      "bbox": [
+        235.81,
+        125.39,
+        312.02,
+        150.66
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00455,
+      "bbox": [
+        234.02,
+        117.7,
+        283.8,
+        132.59
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00428,
+      "bbox": [
+        243.07,
+        141.38,
+        275.91,
+        153.27
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00413,
+      "bbox": [
+        270.27,
+        170.7,
+        359.84,
+        194.45
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00397,
+      "bbox": [
+        23.69,
+        107.61,
+        444.9,
+        293.8
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.0027,
+      "bbox": [
+        239.69,
+        114.33,
+        273.02,
+        123.68
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00254,
+      "bbox": [
+        273.99,
+        96.81,
+        355.25,
+        116.0
+      ]
+    }
+  ],
+  "imgsz_448_total": 300,
+  "imgsz_448_d40_count": 38,
+  "imgsz_448_top_d40": [
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.44848,
+      "bbox": [
+        292.54,
+        140.82,
+        354.01,
+        156.75
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.09037,
+      "bbox": [
+        246.56,
+        141.81,
+        274.72,
+        152.32
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.08394,
+      "bbox": [
+        184.77,
+        143.07,
+        220.24,
+        155.53
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.06579,
+      "bbox": [
+        261.81,
+        128.16,
+        309.06,
+        141.92
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.05662,
+      "bbox": [
+        256.22,
+        128.55,
+        309.67,
+        145.51
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.05175,
+      "bbox": [
+        246.51,
+        139.01,
+        277.13,
+        150.54
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.01076,
+      "bbox": [
+        291.33,
+        143.61,
+        347.58,
+        156.11
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.0104,
+      "bbox": [
+        277.44,
+        104.45,
+        310.48,
+        113.62
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00779,
+      "bbox": [
+        243.83,
+        139.47,
+        278.01,
+        153.61
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "D40_Pothole",
+      "confidence": 0.00749,
+      "bbox": [
+        187.45,
+        327.63,
+        442.25,
+        446.63
+      ]
+    }
+  ]
+}

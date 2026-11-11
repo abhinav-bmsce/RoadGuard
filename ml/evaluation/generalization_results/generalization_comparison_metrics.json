@@ -1,0 +1,358 @@
+[
+  {
+    "filename": "0151_jpg.rf.8530ac502a1dbc4c2b732e222c2a1d9b.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0107_jpg.rf.b36504f4b2e1ec9ff8cebacf8ab4c255.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0118_jpg.rf.fe3852eb5521e8919a668ba3a9207f8d.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0081_jpg.rf.d1735a9bb243cb526d9e3e094531c94b.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [
+      {
+        "class_id": 0,
+        "class_name": "D00_Longitudinal_Crack",
+        "confidence": 0.4942,
+        "bbox": [
+          557.5,
+          335.3,
+          639.3,
+          536.4
+        ]
+      }
+    ],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0041_jpg.rf.1f8a699096c7118149354819e27b8018.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0096_jpg.rf.de125945c49ee744d62c17da76d4d68c.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0129_jpg.rf.ba3c9ced9c7139a017f2b8a136c641f7.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.3585,
+        "bbox": [
+          501.5,
+          282.1,
+          573.7,
+          300.4
+        ]
+      }
+    ],
+    "improved_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.3585,
+        "bbox": [
+          501.5,
+          282.1,
+          573.7,
+          300.4
+        ]
+      }
+    ],
+    "baseline_d40_count": 1,
+    "improved_d40_count": 1
+  },
+  {
+    "filename": "0004_jpg.rf.f92ab952cd8544f887caf35fcccbcd10.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.3969,
+        "bbox": [
+          477.0,
+          357.6,
+          528.8,
+          377.1
+        ]
+      }
+    ],
+    "improved_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.3969,
+        "bbox": [
+          477.0,
+          357.6,
+          528.8,
+          377.1
+        ]
+      }
+    ],
+    "baseline_d40_count": 1,
+    "improved_d40_count": 1
+  },
+  {
+    "filename": "0040_jpg.rf.ce9dde51c6f4e3fdfb4ad43b0ab1a623.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "0148_jpg.rf.878d22109d19b7062b708cdf0301d3ce.jpg",
+    "dimensions": "640x640",
+    "baseline_detections": [],
+    "improved_detections": [],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 0
+  },
+  {
+    "filename": "c5036fa8-bed2-426d-94f3-5654ca23dafe.jpeg",
+    "dimensions": "447x447",
+    "baseline_detections": [],
+    "improved_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.4485,
+        "bbox": [
+          292.5,
+          140.8,
+          354.0,
+          156.7
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.4109,
+        "bbox": [
+          184.4,
+          142.7,
+          224.0,
+          156.8
+        ]
+      }
+    ],
+    "baseline_d40_count": 0,
+    "improved_d40_count": 2
+  },
+  {
+    "filename": "Japan_006470.jpg",
+    "dimensions": "600x600",
+    "baseline_detections": [
+      {
+        "class_id": 0,
+        "class_name": "D00_Longitudinal_Crack",
+        "confidence": 0.7609,
+        "bbox": [
+          402.9,
+          450.4,
+          506.4,
+          521.5
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.6044,
+        "bbox": [
+          264.3,
+          380.8,
+          357.8,
+          439.7
+        ]
+      },
+      {
+        "class_id": 1,
+        "class_name": "D10_Transverse_Crack",
+        "confidence": 0.3907,
+        "bbox": [
+          98.3,
+          508.9,
+          310.1,
+          540.2
+        ]
+      },
+      {
+        "class_id": 0,
+        "class_name": "D00_Longitudinal_Crack",
+        "confidence": 0.2665,
+        "bbox": [
+          257.2,
+          456.5,
+          279.6,
+          526.3
+        ]
+      }
+    ],
+    "improved_detections": [
+      {
+        "class_id": 0,
+        "class_name": "D00_Longitudinal_Crack",
+        "confidence": 0.7393,
+        "bbox": [
+          403.9,
+          449.5,
+          507.8,
+          522.6
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.5747,
+        "bbox": [
+          261.0,
+          378.8,
+          360.3,
+          441.0
+        ]
+      },
+      {
+        "class_id": 1,
+        "class_name": "D10_Transverse_Crack",
+        "confidence": 0.4985,
+        "bbox": [
+          80.6,
+          508.1,
+          289.7,
+          540.7
+        ]
+      },
+      {
+        "class_id": 0,
+        "class_name": "D00_Longitudinal_Crack",
+        "confidence": 0.3271,
+        "bbox": [
+          396.5,
+          446.2,
+          484.5,
+          507.4
+        ]
+      }
+    ],
+    "baseline_d40_count": 1,
+    "improved_d40_count": 1
+  },
+  {
+    "filename": "Japan_006484.jpg",
+    "dimensions": "600x600",
+    "baseline_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.6351,
+        "bbox": [
+          317.7,
+          303.9,
+          379.4,
+          355.8
+        ]
+      },
+      {
+        "class_id": 2,
+        "class_name": "D20_Alligator_Crack",
+        "confidence": 0.5834,
+        "bbox": [
+          0.1,
+          347.7,
+          183.2,
+          600.0
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.435,
+        "bbox": [
+          99.4,
+          322.0,
+          149.2,
+          334.0
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.3175,
+        "bbox": [
+          216.8,
+          302.5,
+          266.7,
+          365.3
+        ]
+      }
+    ],
+    "improved_detections": [
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.6481,
+        "bbox": [
+          318.0,
+          300.9,
+          380.3,
+          355.9
+        ]
+      },
+      {
+        "class_id": 2,
+        "class_name": "D20_Alligator_Crack",
+        "confidence": 0.5878,
+        "bbox": [
+          2.8,
+          368.8,
+          188.2,
+          596.2
+        ]
+      },
+      {
+        "class_id": 3,
+        "class_name": "D40_Pothole",
+        "confidence": 0.2673,
+        "bbox": [
+          217.2,
+          302.3,
+          267.7,
+          368.4
+        ]
+      }
+    ],
+    "baseline_d40_count": 3,
+    "improved_d40_count": 2
+  }
+]

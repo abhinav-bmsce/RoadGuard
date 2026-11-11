@@ -1,0 +1,853 @@
+{
+  "evaluation_count": 10,
+  "results": [
+    {
+      "image": "Japan_006443.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "bbox": {
+            "xmin": 6.0,
+            "ymin": 499.0,
+            "xmax": 150.0,
+            "ymax": 594.0
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 340.0,
+            "ymin": 426.0,
+            "xmax": 432.0,
+            "ymax": 564.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 7,
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.4899,
+          "bbox": {
+            "xmin": 233.67,
+            "ymin": 216.99,
+            "xmax": 268.08,
+            "ymax": 258.95
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.3601,
+          "bbox": {
+            "xmin": 488.52,
+            "ymin": 257.49,
+            "xmax": 511.1,
+            "ymax": 271.68
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.3836,
+          "bbox": {
+            "xmin": 0.02,
+            "ymin": 485.94,
+            "xmax": 164.56,
+            "ymax": 599.21
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.3399,
+          "bbox": {
+            "xmin": 319.95,
+            "ymin": 294.2,
+            "xmax": 600.0,
+            "ymax": 580.01
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006446.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 151.0,
+            "ymin": 491.0,
+            "xmax": 186.0,
+            "ymax": 597.0
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 112.0,
+            "ymin": 398.0,
+            "xmax": 158.0,
+            "ymax": 459.0
+          }
+        },
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "bbox": {
+            "xmin": 205.0,
+            "ymin": 345.0,
+            "xmax": 436.0,
+            "ymax": 444.0
+          }
+        },
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "bbox": {
+            "xmin": 159.0,
+            "ymin": 380.0,
+            "xmax": 403.0,
+            "ymax": 443.0
+          }
+        }
+      ],
+      "original_model_predictions": [],
+      "corrected_model_predictions": [
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.3062,
+          "bbox": {
+            "xmin": 112.59,
+            "ymin": 398.76,
+            "xmax": 159.2,
+            "ymax": 465.72
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.2939,
+          "bbox": {
+            "xmin": 110.14,
+            "ymin": 393.54,
+            "xmax": 200.38,
+            "ymax": 599.21
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006452.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "bbox": {
+            "xmin": 161.0,
+            "ymin": 368.0,
+            "xmax": 322.0,
+            "ymax": 588.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.5051,
+          "bbox": {
+            "xmin": 226.2,
+            "ymin": 222.82,
+            "xmax": 288.18,
+            "ymax": 290.59
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.595,
+          "bbox": {
+            "xmin": 177.92,
+            "ymin": 352.96,
+            "xmax": 311.85,
+            "ymax": 599.23
+          }
+        },
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.2551,
+          "bbox": {
+            "xmin": 189.2,
+            "ymin": 373.2,
+            "xmax": 283.23,
+            "ymax": 596.77
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006465.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "bbox": {
+            "xmin": 219.0,
+            "ymin": 522.0,
+            "xmax": 420.0,
+            "ymax": 587.0
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 292.0,
+            "ymin": 395.0,
+            "xmax": 329.0,
+            "ymax": 443.0
+          }
+        }
+      ],
+      "original_model_predictions": [],
+      "corrected_model_predictions": [
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.6045,
+          "bbox": {
+            "xmin": 349.0,
+            "ymin": 360.82,
+            "xmax": 597.88,
+            "ymax": 589.77
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.4705,
+          "bbox": {
+            "xmin": 292.13,
+            "ymin": 396.6,
+            "xmax": 322.92,
+            "ymax": 444.16
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006467.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "bbox": {
+            "xmin": 87.0,
+            "ymin": 295.0,
+            "xmax": 600.0,
+            "ymax": 548.0
+          }
+        }
+      ],
+      "original_model_predictions": [],
+      "corrected_model_predictions": [
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.7382,
+          "bbox": {
+            "xmin": 81.97,
+            "ymin": 338.29,
+            "xmax": 597.2,
+            "ymax": 538.09
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.6202,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 286.41,
+            "xmax": 233.0,
+            "ymax": 581.5
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.3463,
+          "bbox": {
+            "xmin": 41.43,
+            "ymin": 280.22,
+            "xmax": 238.76,
+            "ymax": 502.78
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006468.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 8,
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.4861,
+          "bbox": {
+            "xmin": 0.88,
+            "ymin": 0.04,
+            "xmax": 257.28,
+            "ymax": 79.23
+          }
+        }
+      ],
+      "corrected_model_predictions": []
+    },
+    {
+      "image": "Japan_006470.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 398.0,
+            "ymin": 449.0,
+            "xmax": 504.0,
+            "ymax": 522.0
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 264.0,
+            "ymin": 378.0,
+            "xmax": 359.0,
+            "ymax": 445.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 0,
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.6903,
+          "bbox": {
+            "xmin": 153.99,
+            "ymin": 305.45,
+            "xmax": 169.13,
+            "ymax": 345.55
+          }
+        },
+        {
+          "raw_cls_id": 7,
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.4994,
+          "bbox": {
+            "xmin": 237.11,
+            "ymin": 295.46,
+            "xmax": 298.14,
+            "ymax": 351.43
+          }
+        },
+        {
+          "raw_cls_id": 7,
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.4504,
+          "bbox": {
+            "xmin": 119.47,
+            "ymin": 294.57,
+            "xmax": 193.5,
+            "ymax": 338.69
+          }
+        },
+        {
+          "raw_cls_id": 5,
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.3829,
+          "bbox": {
+            "xmin": 236.75,
+            "ymin": 295.25,
+            "xmax": 297.99,
+            "ymax": 351.39
+          }
+        },
+        {
+          "raw_cls_id": 0,
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.3444,
+          "bbox": {
+            "xmin": 290.82,
+            "ymin": 321.58,
+            "xmax": 306.78,
+            "ymax": 357.42
+          }
+        },
+        {
+          "raw_cls_id": 6,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.3262,
+          "bbox": {
+            "xmin": 0.0,
+            "ymin": 238.27,
+            "xmax": 95.32,
+            "ymax": 359.98
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.7609,
+          "bbox": {
+            "xmin": 402.92,
+            "ymin": 450.42,
+            "xmax": 506.4,
+            "ymax": 521.51
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.6044,
+          "bbox": {
+            "xmin": 264.33,
+            "ymin": 380.79,
+            "xmax": 357.85,
+            "ymax": 439.66
+          }
+        },
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.3907,
+          "bbox": {
+            "xmin": 98.32,
+            "ymin": 508.86,
+            "xmax": 310.13,
+            "ymax": 540.24
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.2665,
+          "bbox": {
+            "xmin": 257.18,
+            "ymin": 456.53,
+            "xmax": 279.61,
+            "ymax": 526.27
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006483.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "bbox": {
+            "xmin": 127.0,
+            "ymin": 305.0,
+            "xmax": 427.0,
+            "ymax": 329.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 13,
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.2831,
+          "bbox": {
+            "xmin": 411.46,
+            "ymin": 117.27,
+            "xmax": 484.13,
+            "ymax": 165.42
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.3008,
+          "bbox": {
+            "xmin": 125.72,
+            "ymin": 304.42,
+            "xmax": 416.17,
+            "ymax": 336.61
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006484.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 212.0,
+            "ymin": 298.0,
+            "xmax": 302.0,
+            "ymax": 382.0
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 418.0,
+            "ymin": 309.0,
+            "xmax": 508.0,
+            "ymax": 393.0
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 314.0,
+            "ymin": 300.0,
+            "xmax": 374.0,
+            "ymax": 360.0
+          }
+        },
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "bbox": {
+            "xmin": 19.0,
+            "ymin": 383.0,
+            "xmax": 187.0,
+            "ymax": 600.0
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 452.0,
+            "ymin": 408.0,
+            "xmax": 514.0,
+            "ymax": 446.0
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 104.0,
+            "ymin": 322.0,
+            "xmax": 148.0,
+            "ymax": 337.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.784,
+          "bbox": {
+            "xmin": 484.53,
+            "ymin": 256.83,
+            "xmax": 557.12,
+            "ymax": 289.16
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.7285,
+          "bbox": {
+            "xmin": 219.81,
+            "ymin": 232.16,
+            "xmax": 250.9,
+            "ymax": 257.75
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.6921,
+          "bbox": {
+            "xmin": 279.38,
+            "ymin": 236.35,
+            "xmax": 309.3,
+            "ymax": 259.74
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.4284,
+          "bbox": {
+            "xmin": 266.86,
+            "ymin": 234.39,
+            "xmax": 285.0,
+            "ymax": 250.59
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.408,
+          "bbox": {
+            "xmin": 308.04,
+            "ymin": 237.89,
+            "xmax": 321.95,
+            "ymax": 249.61
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.3575,
+          "bbox": {
+            "xmin": 388.71,
+            "ymin": 242.02,
+            "xmax": 415.43,
+            "ymax": 267.51
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.6351,
+          "bbox": {
+            "xmin": 317.73,
+            "ymin": 303.92,
+            "xmax": 379.39,
+            "ymax": 355.79
+          }
+        },
+        {
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.5834,
+          "bbox": {
+            "xmin": 0.14,
+            "ymin": 347.65,
+            "xmax": 183.16,
+            "ymax": 600.0
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.435,
+          "bbox": {
+            "xmin": 99.43,
+            "ymin": 322.02,
+            "xmax": 149.24,
+            "ymax": 334.02
+          }
+        },
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.3175,
+          "bbox": {
+            "xmin": 216.78,
+            "ymin": 302.5,
+            "xmax": 266.74,
+            "ymax": 365.33
+          }
+        }
+      ]
+    },
+    {
+      "image": "Japan_006487.jpg",
+      "dimensions": "600x600",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "bbox": {
+            "xmin": 83.0,
+            "ymin": 426.0,
+            "xmax": 157.0,
+            "ymax": 443.0
+          }
+        },
+        {
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "bbox": {
+            "xmin": 306.0,
+            "ymin": 469.0,
+            "xmax": 341.0,
+            "ymax": 567.0
+          }
+        }
+      ],
+      "original_model_predictions": [
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.7855,
+          "bbox": {
+            "xmin": 179.94,
+            "ymin": 384.98,
+            "xmax": 231.79,
+            "ymax": 421.52
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.7626,
+          "bbox": {
+            "xmin": 406.59,
+            "ymin": 353.2,
+            "xmax": 557.05,
+            "ymax": 476.86
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.745,
+          "bbox": {
+            "xmin": 335.75,
+            "ymin": 389.57,
+            "xmax": 393.98,
+            "ymax": 429.92
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.6776,
+          "bbox": {
+            "xmin": 283.58,
+            "ymin": 388.48,
+            "xmax": 297.06,
+            "ymax": 400.37
+          }
+        },
+        {
+          "raw_cls_id": 1,
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.6186,
+          "bbox": {
+            "xmin": 566.83,
+            "ymin": 403.59,
+            "xmax": 599.85,
+            "ymax": 450.94
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.4485,
+          "bbox": {
+            "xmin": 318.52,
+            "ymin": 388.78,
+            "xmax": 346.47,
+            "ymax": 418.69
+          }
+        },
+        {
+          "raw_cls_id": 0,
+          "class_id": 0,
+          "class_name": "D00_Longitudinal_Crack",
+          "confidence": 0.3702,
+          "bbox": {
+            "xmin": 136.88,
+            "ymin": 383.23,
+            "xmax": 146.29,
+            "ymax": 408.0
+          }
+        },
+        {
+          "raw_cls_id": 9,
+          "class_id": 1,
+          "class_name": "D10_Transverse_Crack",
+          "confidence": 0.3564,
+          "bbox": {
+            "xmin": 581.61,
+            "ymin": 315.81,
+            "xmax": 591.17,
+            "ymax": 341.52
+          }
+        },
+        {
+          "raw_cls_id": 2,
+          "class_id": 2,
+          "class_name": "D20_Alligator_Crack",
+          "confidence": 0.2534,
+          "bbox": {
+            "xmin": 248.51,
+            "ymin": 391.29,
+            "xmax": 261.68,
+            "ymax": 401.64
+          }
+        }
+      ],
+      "corrected_model_predictions": [
+        {
+          "class_id": 3,
+          "class_name": "D40_Pothole",
+          "confidence": 0.4916,
+          "bbox": {
+            "xmin": 144.08,
+            "ymin": 468.71,
+            "xmax": 267.37,
+            "ymax": 501.43
+          }
+        }
+      ]
+    }
+  ]
+}

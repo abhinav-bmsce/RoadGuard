@@ -1,0 +1,59 @@
+
+# Python & Virtualenv
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.npm
+*.tsbuildinfo
+.eslintcache
+
+# Environment variables & secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+backend/roadguard.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ultralytics & Model runs
+runs/
+*.pt
+*.onnx
+*.engine
+!ml/models/best.pt
+!ml/models/roadguard_yolov8n_backup.pt
+!ml/models/*.onnx
+
+# Uploaded files and generated reports
+backend/uploads/images/*
+!backend/uploads/images/.gitkeep
+backend/uploads/annotated/*
+!backend/uploads/annotated/.gitkeep
+backend/uploads/reports/*
+!backend/uploads/reports/.gitkeep
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo

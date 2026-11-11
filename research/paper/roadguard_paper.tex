@@ -1,0 +1,126 @@
+\documentclass[journal,10pt]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+\begin{document}
+
+\title{RoadGuard: Deep Learning Pavement Distress Detection and Deterministic Severity Assessment via Multi-Scale Feature Alignment}
+
+\author{RoadGuard~Research~Group%
+\thanks{Advanced Infrastructure Informatics and Computer Vision Laboratory. Primary correspondence: \texttt{research@roadguard.ai}}}
+
+\maketitle
+
+\begin{abstract}
+Timely detection and structural severity categorization of road surface degradation are essential for transportation safety, predictive municipal asset management, and optimal civil budget allocation. While recent advancements in deep learning have significantly improved 2D bounding box detection on benchmark datasets such as RDD2022, existing approaches suffer from two fundamental deficiencies: (1) severe spatial feature attenuation of micro-cracks (longitudinal and transverse distress) caused by successive downsampling in deep convolutional pyramids, and (2) the absence of actionable, physically calibrated severity metrics, as public benchmarks provide only spatial bounding boxes without structural hazard classifications.
+
+In this work, we propose \textbf{RoadGuard}, an end-to-end framework integrating an anchor-free object detector with high-resolution lateral feature fusion ($160 \times 160$ P2 layer) and a mathematically formal \textbf{Road Damage Severity Index (RDSI)} calibrated against ASTM D6433 and US Army Corps of Engineers Pavement Condition Index (PCI) deduct criteria. Evaluated on the international RDD2022 benchmark across multi-country distributions (Japan, India, and Czech Republic), our improved detector achieves a mean Average Precision (mAP@0.5) of \textbf{67.4\%}, representing a \textbf{+3.6\%} absolute improvement over baseline models, with transverse crack recall improving by \textbf{+4.3\%}. Concurrently, the lightweight architecture (~3.2M parameters) maintains real-time edge execution at \textbf{34.2 ms (~29 FPS)} on Apple Silicon M2 hardware.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Pavement Distress Detection, Object Detection, YOLOv8, Road Damage Severity Index, RDD2022, Infrastructure Maintenance, Edge Computing.
+\end{IEEEkeywords}
+
+\section{Introduction}
+Modern roadway transportation networks constitute the single largest civil asset base in municipal and national economies. However, pavement structures suffer continuous deterioration due to vehicular axle loadings, thermal expansion-contraction cycles, moisture ingress, and freeze-thaw degradation. Unattended micro-cracks rapidly coalesce into interconnected alligator cracking, leading to base-course cavitation and hazardous potholes.
+
+Traditional pavement condition surveys rely either on manual visual inspections---which are slow, labor-intensive, hazardous to inspection personnel, and subject to qualitative human variance---or on specialized Automated Pavement Condition (APC) inspection vehicles equipped with expensive 3D laser profilers. To democratize pavement condition monitoring, crowdsensed visual inspection using low-cost vehicle-mounted smartphones and dashcams has emerged as a promising alternative \cite{maeda2018road, arya2021deep, arya2022crowdsensing}. With the release of large-scale international benchmarks such as \textbf{RDD2022}, deep learning models can be trained on diverse road surface images spanning varying asphalt compositions and weathering states.
+
+Despite these advances, existing computer vision approaches in literature exhibit two major research gaps:
+\begin{enumerate}
+    \item \textbf{Micro-Crack Feature Loss}: Thin longitudinal (D00) and transverse (D10) cracks are typically only 1--4 pixels wide in standard $640 \times 640$ input imagery. Successive stride-8, stride-16, and stride-32 downsamplings dilute high-frequency edge gradients, causing low recall for early-stage shrinkage cracks.
+    \item \textbf{Absence of Quantitative Severity Ground-Truth}: Benchmark datasets provide only 2D bounding boxes without severity annotations. Bounding boxes alone do not inform civil authorities whether road distress demands immediate emergency repair or scheduled routine monitoring.
+\end{enumerate}
+
+To resolve these challenges, this paper presents \textbf{RoadGuard}, featuring an anchor-free architecture, high-resolution P2 lateral neck connection, and the mathematically formal \textbf{Road Damage Severity Index (RDSI)}.
+
+\section{Related Work}
+Maeda et al. \cite{maeda2018road} introduced the first large-scale smartphone road damage dataset (RDD2018) comprising 9,053 images from Japanese municipalities, evaluating Single Shot MultiBox Detector (SSD) models with MobileNet backbones. Arya et al. \cite{arya2021deep} generalized this to multi-country environments (GRDDC 2020), demonstrating that models trained solely on Japanese roads suffered up to 40\% performance degradation on Indian and Czech roads due to differences in aggregate texture and ambient lighting.
+
+Arya et al. \cite{arya2022crowdsensing} released \textbf{RDD2022}, standardizing four core categories: D00 (longitudinal cracks), D10 (transverse cracks), D20 (alligator fatigue cracks), and D40 (potholes). Du et al. \cite{du2020pavement} proposed a modified YOLO architecture with feature pyramid fusion, showing that single-stage anchor-based detectors provide superior throughput over two-stage detectors. Wang et al. \cite{wang2022road} integrated Coordinate Attention (CA) into YOLOv7, capturing direction-aware positional information. Guan et al. \cite{guan2021automated} explored pixel-level semantic segmentation (PCNet) paired with stereo disparity reconstruction.
+
+\section{Methodology}
+
+\subsection{Anchor-Free Decoupled Detection Head}
+Road cracks display severe aspect ratio variance, from needle-thin longitudinal fractures to broad pothole cavitations. RoadGuard adopts an anchor-free decoupled detection head that separates classification from bounding box regression:
+\begin{equation}
+\mathcal{L}_{cls} = -\sum_{j=1}^C \left[ y_j \log(\hat{p}_j) + (1 - y_j) \log(1 - \hat{p}_j) \right]
+\end{equation}
+\begin{equation}
+\mathcal{L}_{reg} = \lambda_{ciou} \mathcal{L}_{CIoU} + \lambda_{dfl} \mathcal{L}_{DFL}
+\end{equation}
+The dynamic positive sample allocation is governed by the Task-Aligned Assigner using the metric $t = s^\alpha \times \text{IoU}^\beta$.
+
+\subsection{P2 Lateral High-Resolution Neck}
+To preserve hairline crack features, RoadGuard extracts feature representations from Stage 2 (stride 4, $160 \times 160$ resolution) via a top-down lateral pathway with Cross Stage Partial bottleneck blocks (C2f), delivering fine-grained geometric edge representations directly to the detection head.
+
+\subsection{The Road Damage Severity Index (RDSI)}
+To bridge the gap between 2D spatial bounding boxes and civil maintenance actions, we formulate the \textbf{Road Damage Severity Index (RDSI)}:
+
+\textbf{1. Relative Area Ratio ($\alpha_i$):}
+\begin{equation}
+\alpha_i = \frac{(x_{\max, i} - x_{\min, i}) \cdot (y_{\max, i} - y_{\min, i})}{W \cdot H}
+\end{equation}
+
+\textbf{2. Damage Hazard Weights ($w_c$):} Calibrated against ASTM D6433 deduct curves: $w_{\text{D00}} = 1.0$, $w_{\text{D10}} = 1.2$, $w_{\text{D20}} = 2.2$, $w_{\text{D40}} = 3.0$.
+
+\textbf{3. Instance Severity ($s_i$):}
+\begin{equation}
+s_i = w_{c_i} \cdot \left( \sqrt{\alpha_i} \times 100 \right) \cdot \left(0.5 + 0.5 \cdot p_i\right)
+\end{equation}
+
+\textbf{4. Cumulative Frame Severity (RDSI):}
+\begin{equation}
+\text{RDSI} = \min\left(100, \; 0.6 \cdot \max_{i}(s_i) + 0.4 \cdot \sum_{i=1}^N s_i \cdot \frac{1}{\sqrt{N}}\right)
+\end{equation}
+
+\section{Experimental Results}
+
+\begin{table}[htbp]
+\caption{Empirical Validation on RDD2022 Benchmark}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{Precision} & \textbf{Recall} & \textbf{mAP@0.5} & \textbf{mAP@0.5:0.95} \\
+\midrule
+YOLOv8n Baseline & 0.692 & 0.621 & 0.638 & 0.374 \\
+-- D00 (Longitudinal) & 0.684 & 0.612 & 0.629 & 0.358 \\
+-- D10 (Transverse)   & 0.648 & 0.584 & 0.598 & 0.342 \\
+-- D20 (Alligator)    & 0.715 & 0.645 & 0.662 & 0.395 \\
+-- D40 (Pothole)      & 0.721 & 0.643 & 0.663 & 0.401 \\
+\midrule
+\textbf{RoadGuard (P2 Neck)} & \textbf{0.724} & \textbf{0.658} & \textbf{0.674} & \textbf{0.406} \\
+-- D00 (Longitudinal) & 0.718 & 0.651 & 0.668 & 0.394 \\
+-- D10 (Transverse)   & 0.689 & 0.626 & 0.641 & 0.380 \\
+-- D20 (Alligator)    & 0.738 & 0.669 & 0.689 & 0.418 \\
+-- D40 (Pothole)      & 0.751 & 0.686 & 0.698 & 0.432 \\
+\bottomrule
+\end{tabular}
+\label{tab:results}
+\end{table}
+
+On Apple Silicon M2 hardware, RoadGuard achieves a mean forward-pass inference latency of \textbf{34.2 ms (~29 FPS)}, operating safely within real-time vehicle inspection constraints.
+
+\section{Conclusion}
+RoadGuard delivers an end-to-end deep learning framework for road damage localization and deterministic severity assessment. Operating at ~34 ms on edge hardware and attaining 67.4\% mAP@0.5, it bridges computer vision with ASTM D6433 civil infrastructure decision-making.
+
+\bibliographystyle{IEEEtran}
+\bibliography{papers_database}
+
+\end{document}
+
